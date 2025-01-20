@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Typography */
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes typewriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes progress {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+/* Animation Utility Classes */
+.animate-fadeIn {
+  animation: fadeIn 1s ease-in-out;
+}
+
+.animate-slideUp {
+  animation: slideUp 0.8s ease-out;
+}
+
+.animate-typewriter {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 3px solid;
+  width: 100%;
+  animation: typewriter 4s steps(40, end), blink 0.75s step-end infinite;
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+.animate-bounce {
+  animation: bounce 1s ease-in-out infinite;
+}
+
+.animate-fadeInUp {
+  animation: fadeInUp 1s ease-out;
+}
+
+/* Light Mode Styles */
+body {
+  background-color: #f7fafc; /* Light background */
+  color: #2d3748; /* Dark text */
+}
+
+.bg-white {
+  background-color: #ffffff; /* White background */
+}
+
+.text-gray-600 {
+  color: #718096; /* Muted text */
+}
+
+.bg-gray-50 {
+  background-color: #f7fafc; /* Very light background */
+}
+
+/* Dark Mode Styles */
+.dark body {
+  background-color: #1a202c; /* Primary dark background */
+  color: #edf2f7; /* Light text for dark mode */
+}
+
+.dark .bg-gray-800 {
+  background-color: #2d3748; /* Secondary dark background */
+}
+
+.dark .bg-white {
+  background-color: #1a202c; /* Header/Footer dark background */
+}
+
+.dark .bg-gray-900 {
+  background-color: #1a202c; /* Component backgrounds */
+}
+
+.dark .text-gray-600 {
+  color: #e2e8f0; /* Lighter text */
+}
+
+.dark .text-gray-800 {
+  color: #edf2f7; /* Lighter primary text */
+}
+
+.dark .bg-blue-600 {
+  background-color: #3182ce; /* Blue buttons in dark mode */
+}
+
+.dark .text-white {
+  color: #ffffff; /* Standard white text for dark mode */
+}
+
+.dark .text-blue-400 {
+  color: #63b3ed; /* Lighter blue text for dark mode */
+}
+
+.dark .hover\:bg-gray-600:hover {
+  background-color: #4a5568; /* Dark hover effect */
+}
+
+.dark .hover\:bg-blue-700:hover {
+  background-color: #2b6cb0; /* Blue button hover */
+}
+
+/* Scrollbar Customization (for Dark Mode) */
+.dark ::-webkit-scrollbar {
+  width: 12px;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: #2d3748;
+  border-radius: 6px;
+}
+
+.dark ::-webkit-scrollbar-track {
+  background: #1a202c;
+}
+
+/* Header and Footer Styling */
+header, footer {
+  transition: background-color 0.3s ease, color 0.3s ease;
+  background-color: #ffffff; /* Light mode header/footer */
+}
+
+.dark header, .dark footer {
+  background-color: #1a202c; /* Dark mode header/footer */
+}
+
+/* Utility Class for Button Hover Scaling */
+.animate-hoverScale {
+  transition: transform 0.3s ease;
+}
+
+/* Progress Bar Animation */
+.animate-progress {
+  animation: progress 2s ease-in-out;
+}
